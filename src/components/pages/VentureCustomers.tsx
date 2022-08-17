@@ -1,12 +1,12 @@
 
-interface Venture CustomersProps {}
+interface VentureCustomersProps {}
         
-const Venture CustomersPage: React.FC<Venture CustomersProps> = (props) => {
+const VentureCustomersPage: React.FC<VentureCustomersProps> = (props) => {
   console.log(props);
   return (
     <>
-      <h1>Here is the Venture Customers.</h1>
+      <h1>Here is the VentureCustomers.</h1>
     </>
   );
 };
-export default Venture CustomersPage;
+export default VentureCustomersPage;

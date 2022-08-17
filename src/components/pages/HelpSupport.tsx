@@ -1,12 +1,12 @@
 
-interface Help & SupportProps {}
+interface HelpSupportProps {}
         
-const Help & SupportPage: React.FC<Help & SupportProps> = (props) => {
+const HelpSupportPage: React.FC<HelpSupportProps> = (props) => {
   console.log(props);
   return (
     <>
-      <h1>Here is the Help & Support.</h1>
+      <h1>Here is the HelpSupport.</h1>
     </>
   );
 };
-export default Help & SupportPage;
+export default HelpSupportPage;

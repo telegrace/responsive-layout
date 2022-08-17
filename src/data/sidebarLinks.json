@@ -11,11 +11,6 @@
     "link": "/project-customers",
     "icon": "customers"
   },
-  {
-    "title": "Project Customers",
-    "link": "/project-customers",
-    "icon": "customers"
-  },
   { "title": "Projects", "link": "/projects", "icon": "projects" },
   { "title": "Assets", "link": "/assets", "icon": "assets" },
   { "title": "Devices", "link": "/devices", "icon": "devices" },

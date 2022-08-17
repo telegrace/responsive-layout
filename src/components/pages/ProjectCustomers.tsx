@@ -1,12 +1,12 @@
 
-interface Project CustomersProps {}
+interface ProjectCustomersProps {}
         
-const Project CustomersPage: React.FC<Project CustomersProps> = (props) => {
+const ProjectCustomersPage: React.FC<ProjectCustomersProps> = (props) => {
   console.log(props);
   return (
     <>
-      <h1>Here is the Project Customers.</h1>
+      <h1>Here is the ProjectCustomers.</h1>
     </>
   );
 };
-export default Project CustomersPage;
+export default ProjectCustomersPage;

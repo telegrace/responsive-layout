@@ -3,18 +3,15 @@ import os.path
 import re
 
 def main():
-    user_input = input("Use default file path: src/data/sidebarLinks.json? y/n ")
+    file_path = "src/data/sidebarLinks.json"
+    pages_path = "src/components/pages"
 
-    if user_input == "y" or user_input == "Y" or user_input == "":
-        file_path = "src/data/sidebarLinks.json"
-    else:
+    user_input = input("Use default file path: src/data/sidebarLinks.json? y/n ")
+    if user_input == "n" or user_input == "N":
         file_path = input("Enter file path: ")
 
     user_input = input("Use default file path for pages: src/components/pages? y/n ")
-
-    if user_input == "y" or user_input == "Y" or user_input == "":
-        pages_path = "src/components/pages"
-    else: 
+    if user_input == "n" or user_input == "N":
         pages_path = input("Enter file path: ")
     
     file = open(file_path, "r")
@@ -37,7 +34,7 @@ const %s: React.FC<%s> = (props) => {
   );
 };
 export default %s;
-""" %(link["title"]+"Props", link["title"]+"Page", link["title"]+"Props", link["title"], link["title"]+"Page")
+""" %(pageName+"Props", pageName+"Page", pageName+"Props", pageName, pageName+"Page")
 
         file_path = pages_path + "/" + pageName + ".tsx"
         abs_path = os.path.join(dir_path, file_path)
