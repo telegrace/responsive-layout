@@ -1,0 +1,30 @@
+[
+  { "title": "Overview", "link": "/overview", "icon": "overview" },
+  { "title": "Ventures", "link": "/ventures", "icon": "ventures" },
+  {
+    "title": "Venture Customers",
+    "link": "/venture-customers",
+    "icon": "customers"
+  },
+  {
+    "title": "Project Customers",
+    "link": "/project-customers",
+    "icon": "customers"
+  },
+  {
+    "title": "Project Customers",
+    "link": "/project-customers",
+    "icon": "customers"
+  },
+  { "title": "Projects", "link": "/projects", "icon": "projects" },
+  { "title": "Assets", "link": "/assets", "icon": "assets" },
+  { "title": "Devices", "link": "/devices", "icon": "devices" },
+  { "title": "Events", "link": "/events", "icon": "events" },
+  {
+    "title": "Notifications",
+    "link": "/notifications",
+    "icon": "notifications"
+  },
+  { "title": "Settings", "link": "/settings", "icon": "settings" },
+  { "title": "Help & Support", "link": "/help", "icon": "Help" }
+]
