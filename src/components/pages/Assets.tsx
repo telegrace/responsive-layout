@@ -1,5 +1,5 @@
 
-interface AssetsProps {}
+type AssetsProps = {}
         
 const AssetsPage: React.FC<AssetsProps> = (props) => {
   console.log(props);

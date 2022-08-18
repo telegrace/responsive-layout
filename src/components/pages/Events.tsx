@@ -1,5 +1,5 @@
 
-interface EventsProps {}
+type EventsProps = {}
         
 const EventsPage: React.FC<EventsProps> = (props) => {
   console.log(props);

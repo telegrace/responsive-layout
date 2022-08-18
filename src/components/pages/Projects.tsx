@@ -1,5 +1,5 @@
 
-interface ProjectsProps {}
+type ProjectsProps = {}
         
 const ProjectsPage: React.FC<ProjectsProps> = (props) => {
   console.log(props);

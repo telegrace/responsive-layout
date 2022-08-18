@@ -1,5 +1,5 @@
 
-interface HelpSupportProps {}
+type HelpSupportProps = {}
         
 const HelpSupportPage: React.FC<HelpSupportProps> = (props) => {
   console.log(props);

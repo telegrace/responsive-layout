@@ -1,5 +1,5 @@
 
-interface VentureCustomersProps {}
+type VentureCustomersProps = {}
         
 const VentureCustomersPage: React.FC<VentureCustomersProps> = (props) => {
   console.log(props);

@@ -1,5 +1,5 @@
 
-interface NotificationsProps {}
+type NotificationsProps = {}
         
 const NotificationsPage: React.FC<NotificationsProps> = (props) => {
   console.log(props);
