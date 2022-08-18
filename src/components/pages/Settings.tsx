@@ -1,5 +1,5 @@
 
-interface SettingsProps {}
+type SettingsProps = {}
         
 const SettingsPage: React.FC<SettingsProps> = (props) => {
   console.log(props);

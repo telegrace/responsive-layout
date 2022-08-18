@@ -1,5 +1,5 @@
 
-interface OverviewProps {}
+type OverviewProps = {}
         
 const OverviewPage: React.FC<OverviewProps> = (props) => {
   console.log(props);

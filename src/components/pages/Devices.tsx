@@ -1,5 +1,5 @@
 
-interface DevicesProps {}
+type DevicesProps = {}
         
 const DevicesPage: React.FC<DevicesProps> = (props) => {
   console.log(props);
