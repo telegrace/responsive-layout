@@ -23,7 +23,7 @@ def main():
         pageName = re.sub(r"\W", "", link["title"])
 
         page_content = """
-interface %s {}
+type %s = {}
         
 const %s: React.FC<%s> = (props) => {
   console.log(props);
