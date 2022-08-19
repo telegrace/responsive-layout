@@ -16,6 +16,9 @@ import {
   HelpSupportPage,
 } from "./components/utils/importPages";
 import LandingPage from "./components/pages/LandingPage";
+import GridLayoutContainer from "./components/layout/GridLayoutContainer";
+import Sidebar from "./components/layout/Sidebar";
+import DashboardPage from "./components/layout/Dashboard";
 
 const components = {
   "/overview": OverviewPage,
@@ -34,18 +37,20 @@ const components = {
 function App() {
   return (
     <>
+      {/* <Sidebar /> */}
       <BrowserRouter>
-        <Navigation />
+        {/* <Navigation /> */}
         <Routes>
-          <Route path="/" element={<LandingPage />} />
-          {sidebarLinks.map((link, i) => {
+          <Route path="/" element={<DashboardPage />} />
+          {/* {sidebarLinks.map((link, i) => {
             const Component = components[link.link as keyof typeof components];
             console.log("component", Component, "link", link.link);
             return <Route path={link.link} element={<Component />} key={i} />;
           })}
-          <Route path="/*" element={<PageNotFoundPage />} />
+          <Route path="/*" element={<PageNotFoundPage />} /> */}
         </Routes>
       </BrowserRouter>
+      {/* <GridLayoutContainer /> */}
     </>
   );
 }

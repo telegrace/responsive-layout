@@ -1,25 +1,25 @@
 [
-  { "title": "Overview", "link": "/overview", "icon": "overview" },
-  { "title": "Ventures", "link": "/ventures", "icon": "ventures" },
+  { "title": "Overview", "link": "/overview", "icon": "FiEye" },
+  { "title": "Ventures", "link": "/ventures", "icon": "FiGrid" },
   {
     "title": "Venture Customers",
     "link": "/venture-customers",
-    "icon": "customers"
+    "icon": "FiSmile"
   },
+  { "title": "Projects", "link": "/projects", "icon": "FiAward" },
   {
     "title": "Project Customers",
     "link": "/project-customers",
-    "icon": "customers"
+    "icon": "FiUsers"
   },
-  { "title": "Projects", "link": "/projects", "icon": "projects" },
-  { "title": "Assets", "link": "/assets", "icon": "assets" },
-  { "title": "Devices", "link": "/devices", "icon": "devices" },
-  { "title": "Events", "link": "/events", "icon": "events" },
+  { "title": "Assets", "link": "/assets", "icon": "FiRadio" },
+  { "title": "Devices", "link": "/devices", "icon": "FiPackage" },
+  { "title": "Events", "link": "/events", "icon": "FiCalendar" },
   {
     "title": "Notifications",
     "link": "/notifications",
-    "icon": "notifications"
+    "icon": "FiBell"
   },
-  { "title": "Settings", "link": "/settings", "icon": "settings" },
-  { "title": "Help & Support", "link": "/help", "icon": "Help" }
+  { "title": "Settings", "link": "/settings", "icon": "FiSettings" },
+  { "title": "Help & Support", "link": "/help", "icon": "FiHelpCircle" }
 ]
