@@ -1,7 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navigation from "./components/layout/Navigation";
-import PageNotFoundPage from "./components/pages/PageNotFound";
-import sidebarLinks from "./data/sidebarLinks.json";
 import {
   OverviewPage,
   VenturesPage,
@@ -15,10 +12,7 @@ import {
   SettingsPage,
   HelpSupportPage,
 } from "./components/utils/importPages";
-import LandingPage from "./components/pages/LandingPage";
-import GridLayoutContainer from "./components/layout/GridLayoutContainer";
-import Sidebar from "./components/layout/Sidebar";
-import DashboardPage from "./components/layout/Dashboard";
+import DashboardLayout from "./components/layout/DashboardLayout";
 
 const components = {
   "/overview": OverviewPage,
@@ -37,11 +31,9 @@ const components = {
 function App() {
   return (
     <>
-      {/* <Sidebar /> */}
       <BrowserRouter>
-        {/* <Navigation /> */}
         <Routes>
-          <Route path="/" element={<DashboardPage />} />
+          <Route path="/" element={<DashboardLayout />} />
           {/* {sidebarLinks.map((link, i) => {
             const Component = components[link.link as keyof typeof components];
             console.log("component", Component, "link", link.link);
