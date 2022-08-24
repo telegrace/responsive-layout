@@ -1,0 +1,12 @@
+[
+  { "title": "Overview", "link": "/overview", "icon": "FiEye" },
+  { "title": "Assets", "link": "/assets", "icon": "FiRadio" },
+  { "title": "Devices", "link": "/devices", "icon": "FiRadio" },
+  { "title": "Notifications", "link": "/notifications", "icon": "FiRadio" },
+  { "title": "Projects", "link": "/projects", "icon": "FiRadio" },
+  { "title": "Customers", "link": "/customers", "icon": "FiRadio" },
+  { "title": "Clients", "link": "/clients", "icon": "FiRadio" },
+
+  { "title": "Settings", "link": "/settings", "icon": "FiSettings" },
+  { "title": "Help & Support", "link": "/help", "icon": "FiHelpCircle" }
+]

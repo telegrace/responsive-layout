@@ -1,8 +1,8 @@
+type AssetsProps = {};
 
-type AssetsProps = {}
-        
 const AssetsPage: React.FC<AssetsProps> = (props) => {
-  console.log(props);
+  const currentPageLink = window.location.pathname;
+  console.log("currentPageLink, ", currentPageLink);
   return (
     <>
       <h1>Here is the Assets.</h1>

@@ -1,26 +1,22 @@
-import OverviewPage from "./../pages/Overview";
-import VenturesPage from "./../pages/Ventures";
-import VentureCustomersPage from "./../pages/VentureCustomers";
-import ProjectCustomersPage from "./../pages/ProjectCustomers";
-import ProjectsPage from "./../pages/Projects";
-import AssetsPage from "./../pages/Assets";
-import DevicesPage from "./../pages/Devices";
-import EventsPage from "./../pages/Events";
-import NotificationsPage from "./../pages/Notifications";
-import SettingsPage from "./../pages/Settings";
-import HelpSupportPage from "./../pages/HelpSupport";
+import OverviewPage from './../pages/OverviewPage'; 
+import AssetsPage from './../pages/AssetsPage'; 
+import DevicesPage from './../pages/DevicesPage'; 
+import NotificationsPage from './../pages/NotificationsPage'; 
+import ProjectsPage from './../pages/ProjectsPage'; 
+import CustomersPage from './../pages/CustomersPage'; 
+import ClientsPage from './../pages/ClientsPage'; 
+import SettingsPage from './../pages/SettingsPage'; 
+import HelpSupportPage from './../pages/HelpSupportPage'; 
 
 export {
-  OverviewPage,
-  VenturesPage,
-  VentureCustomersPage,
-  ProjectCustomersPage,
-  ProjectsPage,
-  AssetsPage,
-  DevicesPage,
-  EventsPage,
-  NotificationsPage,
-  SettingsPage,
-  HelpSupportPage,
+OverviewPage,
+AssetsPage,
+DevicesPage,
+NotificationsPage,
+ProjectsPage,
+CustomersPage,
+ClientsPage,
+SettingsPage,
+HelpSupportPage,
 };
-//import {OverviewPage, VenturesPage, VentureCustomersPage, ProjectCustomersPage, ProjectsPage, AssetsPage, DevicesPage, EventsPage, NotificationsPage, SettingsPage, HelpSupportPage, };
+//import {OverviewPage, AssetsPage, DevicesPage, NotificationsPage, ProjectsPage, CustomersPage, ClientsPage, SettingsPage, HelpSupportPage, };

@@ -7,15 +7,7 @@ type ContentLayoutProps = {
 const ContentLayout: React.FC<ContentLayoutProps> = ({ children }) => {
   return (
     <>
-      <VStack spacing={3}>
-        <Heading fontWeight="normal" mb={4} letterSpacing="tight">
-          Welcome back,{" "}
-          <Flex display="inline-flex" fontWeight="bold">
-            Grace
-          </Flex>
-        </Heading>
-        {children}
-      </VStack>
+      <VStack spacing={3}>{children}</VStack>
     </>
   );
 };
