@@ -21,13 +21,12 @@ type SidebarMenuProps = {};
 
 const SidebarMenu: React.FC<SidebarMenuProps> = (props) => {
   return (
-    <Flex flexDir="column" h={[null, null, "100vh"]}>
-      <Flex flexDir="column" bg="#2C5282" color="#fff">
+    <Flex flexDir="column">
+      <Flex flexDir="column" bg="#2C5282" color="#fff" h="100vh">
         <LogoComponent />
         <Flex
           flexDir="column"
           as="nav"
-          h="100vh"
           p={[0, 0, 10, 10, 10]}
           alignItems={["center", "center", "center", "start", "start"]}
         >

@@ -2,6 +2,7 @@ import React from "react";
 import { Flex, Heading, HStack } from "@chakra-ui/react";
 import sidebarLinks from "./../../data/sidebar-links.json";
 import { useLocation } from "react-router-dom";
+import UsernameWidget from "../user/userWidget";
 type TopNavigationProps = {};
 
 const TopNavigation: React.FC<TopNavigationProps> = (props) => {
@@ -9,13 +10,20 @@ const TopNavigation: React.FC<TopNavigationProps> = (props) => {
   const [pageName, setPageName] = React.useState<string>("Overview");
 
   React.useEffect(() => {
-    console.log("location.pathname ", location.pathname);
-    let linkObj = sidebarLinks.filter((link) => link.link == location.pathname);
-    setPageName(linkObj[0].title);
+    let linkObj = sidebarLinks.filter(
+      (link) => link.link === location.pathname
+    );
+    if (linkObj.length) {
+      setPageName(linkObj[0].title);
+    } else {
+      setPageName("Oops!");
+    }
+
     //swap key and values for sidebar-link if there is performance issue
   }, [location, pageName]);
+
   return (
-    <HStack m={[4, 4, 8, 8, 8]} spacing="auto">
+    <HStack m={[4, 4, 8, 8, 8]} mt={[3, 3, 6]} spacing="auto">
       <Heading
         fontSize={["2xl", "2xl", "2xl", "3xl", "4xl"]}
         letterSpacing="tight"
@@ -24,23 +32,7 @@ const TopNavigation: React.FC<TopNavigationProps> = (props) => {
         {pageName}
       </Heading>
       <Flex>
-        <Heading
-          fontSize={["2xl", "2xl", "1xl", "1xl", "2xl"]}
-          letterSpacing="tight"
-          mt={1}
-        >
-          Username
-        </Heading>
-        <Heading
-          fontSize={["2xl", "2xl", "1xl", "1xl", "2xl"]}
-          letterSpacing="tight"
-          mt={1}
-          onClick={() => {
-            console.log("show settings and logout");
-          }}
-        >
-          user pic
-        </Heading>
+        <UsernameWidget />
       </Flex>
     </HStack>
   );

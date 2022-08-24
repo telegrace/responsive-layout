@@ -1,4 +1,4 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import ContentLayout from "./ContentLayout";
 import SidebarMenu from "./SidebarMenu";
@@ -18,7 +18,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
       >
         <SidebarMenu />
       </Flex>
-      <Flex bg="blue.100" w="100%" flexDir="column">
+      <Flex bg="blue.100" w="100%" flexDir="column" h="100vh">
         <TopNavigationComponent />
         <ContentLayout>{children}</ContentLayout>
       </Flex>
