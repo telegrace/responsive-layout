@@ -1,5 +1,13 @@
-import { AtSignIcon } from "@chakra-ui/icons";
-import { Circle, Heading, Icon } from "@chakra-ui/react";
+import { ArrowLeftIcon, AtSignIcon, SettingsIcon } from "@chakra-ui/icons";
+import {
+  Circle,
+  Heading,
+  Icon,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+} from "@chakra-ui/react";
 import { User } from "../../types/types";
 
 type UsernameWidgetProps = {
@@ -26,7 +34,20 @@ const UsernameWidget: React.FC<UsernameWidgetProps> = ({ user }) => {
           console.log("show settings and logout");
         }}
       >
-        <Icon as={AtSignIcon} fontSize="4xl" p={1} />
+        <Menu>
+          <MenuButton
+            as={AtSignIcon}
+            aria-label="Options"
+            icon={<AtSignIcon />}
+            variant="outline"
+            fontSize="4xl"
+            p={1}
+          />
+          <MenuList color="#2C5282">
+            <MenuItem icon={<SettingsIcon />}>Settings</MenuItem>
+            <MenuItem icon={<ArrowLeftIcon />}>Logout</MenuItem>
+          </MenuList>
+        </Menu>
       </Circle>
     </>
   );

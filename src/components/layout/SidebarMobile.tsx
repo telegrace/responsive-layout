@@ -27,15 +27,15 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 type Props = {};
 
 const icons = {
-  overview: ViewIcon,
-  assets: MinusIcon,
-  devices: MinusIcon,
-  notifications: BellIcon,
-  projects: MinusIcon,
-  customers: MinusIcon,
-  clients: MinusIcon,
-  settings: SettingsIcon,
-  help: QuestionOutlineIcon,
+  "/overview": <ViewIcon fontSize="2xl" />,
+  "/assets": <MinusIcon fontSize="2xl" />,
+  "/devices": <MinusIcon fontSize="2xl" />,
+  "/notifications": <BellIcon fontSize="2xl" />,
+  "/projects": <MinusIcon fontSize="2xl" />,
+  "/customers": <MinusIcon fontSize="2xl" />,
+  "/clients": <MinusIcon fontSize="2xl" />,
+  "/settings": <SettingsIcon fontSize="2xl" />,
+  "/help": <QuestionOutlineIcon fontSize="2xl" />,
 };
 
 const SidebarMobile: React.FC<Props> = (props) => {
@@ -66,19 +66,23 @@ const SidebarMobile: React.FC<Props> = (props) => {
 
           <DrawerBody>
             {sidebarLinks.map((link, i) => {
-              const LinkIcon = icons[link.icon as keyof typeof icons]; // components for the icon not working dynamically
               return (
-                <Flex className="sidebar-items" key={i} p={2}>
-                  <Link>
-                    <Icon as={LinkIcon} fontSize="2xl" mr="3px" my="-3px" />
-                  </Link>
-                  <Link
-                    _hover={{ textDecor: "none" }}
-                    as={ReactLink}
-                    to={link.link}
-                  >
-                    {link.title}
-                  </Link>
+                <Flex className="sidebar-items" key={i} py={2.5} px={2}>
+                  <>
+                    {icons[link.link as keyof typeof icons]}
+                    <Link
+                      _hover={{ textDecor: "none" }}
+                      display={["flex", "flex", "none", "flex", "flex"]}
+                      as={ReactLink}
+                      to={link.link}
+                      fontSize="2xl"
+                      mt={-0.5}
+                      mx={3}
+                      onClick={onClose}
+                    >
+                      {link.title}
+                    </Link>
+                  </>
                 </Flex>
               );
             })}
