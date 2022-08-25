@@ -6,17 +6,13 @@ type LogoProps = {};
 const LogoComponent: React.FC<LogoProps> = (props) => {
   return (
     <Flex m={8} justifyContent="center">
-      <Image
-        src={meLogo}
-        alt="Machine Economy Platform"
-        p={[0, 0, 0, 3, 3]}
-        mb={1.5}
-      />
+      <Image src={meLogo} alt="Machine Economy Platform" padding={1} />
       <Heading
-        fontSize={["4xl", "4xl", "2xl", "3xl", "4xl"]}
+        fontSize={["3xl", "4xl", "2xl", "3xl", "4xl"]}
         alignSelf="center"
         letterSpacing="tight"
-        display={["none", "none", "none", "flex", "flex"]}
+        display={["flex", "none", "none", "flex", "flex"]}
+        mb={-2}
       >
         ME Platform
       </Heading>

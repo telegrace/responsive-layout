@@ -3,3 +3,9 @@ export type User = {
   email: string;
   profilePic: string;
 };
+
+export type SidebarLink = {
+  title: string;
+  link: string;
+  icon: string;
+};

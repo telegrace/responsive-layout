@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import {
   AssetsPage,
   ClientsPage,
@@ -30,6 +30,7 @@ function App() {
   return (
     <DashboardLayout>
       <Routes>
+        <Route path="/" element={<Navigate replace to="/overview" />} />
         {sidebarLinks.map((link, i) => {
           const Component = components[link.link as keyof typeof components];
           return <Route path={link.link} element={<Component />} key={i} />;

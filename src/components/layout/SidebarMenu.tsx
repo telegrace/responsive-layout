@@ -1,23 +1,28 @@
-import { Flex, Icon, Link } from "@chakra-ui/react";
-// import { FiBell, FiFolder, FiHelpCircle, FiSettings } from "react-icons/fi";
-import { FiFolder } from "react-icons/fi";
+import {
+  BellIcon,
+  MinusIcon,
+  QuestionOutlineIcon,
+  SettingsIcon,
+  ViewIcon,
+} from "@chakra-ui/icons";
+import { Flex, Link } from "@chakra-ui/react";
 import { Link as ReactLink } from "react-router-dom";
 import sidebarLinks from "../../data/sidebar-links.json";
 import LogoComponent from "./LogoComponent";
 
 type SidebarMenuProps = {};
 
-// const icons = {
-//   overview: FiFolder,
-//   assets: FiFolder,
-//   devices: FiFolder,
-//   notifications: FiBell,
-//   projects: FiFolder,
-//   customers: FiFolder,
-//   clients: FiFolder,
-//   settings: FiSettings,
-//   help: FiHelpCircle,
-// };
+const icons = {
+  "/overview": <ViewIcon />,
+  "/assets": <MinusIcon />,
+  "/devices": <MinusIcon />,
+  "/notifications": <BellIcon />,
+  "/projects": <MinusIcon />,
+  "/customers": <MinusIcon />,
+  "/clients": <MinusIcon />,
+  "/settings": <SettingsIcon />,
+  "/help": <QuestionOutlineIcon />,
+};
 
 const SidebarMenu: React.FC<SidebarMenuProps> = (props) => {
   return (
@@ -31,20 +36,20 @@ const SidebarMenu: React.FC<SidebarMenuProps> = (props) => {
           alignItems={["center", "center", "center", "start", "start"]}
         >
           {sidebarLinks.map((link, i) => {
-            // const LinkIcon = icons[link.icon as keyof typeof icons]; // components for the icon not working dynamically
             return (
               <Flex className="sidebar-items" key={i} p={2}>
-                <Link display={["none", "none", "flex", "flex", "flex"]}>
-                  <Icon as={FiFolder} fontSize="2xl" mr="3px" my="-3px" />
-                </Link>
-                <Link
-                  _hover={{ textDecor: "none" }}
-                  display={["flex", "flex", "none", "flex", "flex"]}
-                  as={ReactLink}
-                  to={link.link}
-                >
-                  {link.title}
-                </Link>
+                <>
+                  {icons[link.link as keyof typeof icons]}
+                  <Link
+                    _hover={{ textDecor: "none" }}
+                    display={["flex", "flex", "none", "flex", "flex"]}
+                    as={ReactLink}
+                    to={link.link}
+                    fontSize="2xl"
+                  >
+                    {link.title}
+                  </Link>
+                </>
               </Flex>
             );
           })}

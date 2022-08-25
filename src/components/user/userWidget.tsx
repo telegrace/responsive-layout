@@ -1,5 +1,5 @@
+import { AtSignIcon } from "@chakra-ui/icons";
 import { Circle, Heading, Icon } from "@chakra-ui/react";
-import { FiSmile } from "react-icons/fi";
 import { User } from "../../types/types";
 
 type UsernameWidgetProps = {
@@ -11,6 +11,7 @@ const UsernameWidget: React.FC<UsernameWidgetProps> = ({ user }) => {
     <>
       <Heading
         fontSize={["2xl", "2xl", "1xl", "1xl", "2xl"]}
+        display={["none", "none", "flex", "flex", "flex"]}
         letterSpacing="tight"
         mt={2}
         mx={3}
@@ -25,7 +26,7 @@ const UsernameWidget: React.FC<UsernameWidgetProps> = ({ user }) => {
           console.log("show settings and logout");
         }}
       >
-        <Icon as={FiSmile} fontSize="4xl" p={1} />
+        <Icon as={AtSignIcon} fontSize="4xl" p={1} />
       </Circle>
     </>
   );

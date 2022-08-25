@@ -1,8 +1,10 @@
 import React from "react";
-import { Flex, Heading, HStack } from "@chakra-ui/react";
+import { Flex, Heading, Spacer } from "@chakra-ui/react";
 import sidebarLinks from "./../../data/sidebar-links.json";
 import { useLocation } from "react-router-dom";
 import UsernameWidget from "../user/userWidget";
+import BasicDrawerComponent from "./SidebarMobile";
+
 type TopNavigationProps = {};
 
 const TopNavigation: React.FC<TopNavigationProps> = (props) => {
@@ -18,12 +20,15 @@ const TopNavigation: React.FC<TopNavigationProps> = (props) => {
     } else {
       setPageName("Oops!");
     }
-
     //swap key and values for sidebar-link if there is performance issue
   }, [location, pageName]);
 
   return (
-    <HStack m={[4, 4, 8, 8, 8]} mt={[3, 3, 6]} spacing="auto">
+    <Flex m={[4, 4, 8, 8, 8]} mt={[3, 3, 6]}>
+      <Flex display={["flex", "flex", "none", "none", "none"]}>
+        <BasicDrawerComponent />
+        <Spacer />
+      </Flex>
       <Heading
         fontSize={["2xl", "2xl", "2xl", "3xl", "4xl"]}
         letterSpacing="tight"
@@ -31,10 +36,11 @@ const TopNavigation: React.FC<TopNavigationProps> = (props) => {
       >
         {pageName}
       </Heading>
+      <Spacer />
       <Flex>
         <UsernameWidget />
       </Flex>
-    </HStack>
+    </Flex>
   );
 };
 
