@@ -1,52 +1,43 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navigation from "./components/layout/Navigation";
-import PageNotFoundPage from "./components/pages/PageNotFound";
-import sidebarLinks from "./data/sidebarLinks.json";
+import { Routes, Route, Navigate } from "react-router-dom";
 import {
-  OverviewPage,
-  VenturesPage,
-  VentureCustomersPage,
-  ProjectCustomersPage,
-  ProjectsPage,
   AssetsPage,
+  ClientsPage,
+  CustomersPage,
   DevicesPage,
-  EventsPage,
-  NotificationsPage,
-  SettingsPage,
   HelpSupportPage,
+  NotificationsPage,
+  OverviewPage,
+  ProjectsPage,
+  SettingsPage,
 } from "./components/utils/importPages";
-import LandingPage from "./components/pages/LandingPage";
+import sidebarLinks from "./data/sidebar-links.json";
+import DashboardLayout from "./components/layout/DashboardLayout";
+import PageNotFoundPage from "./components/pages/PageNotFound";
 
 const components = {
   "/overview": OverviewPage,
-  "/ventures": VenturesPage,
-  "/venture-customers": VentureCustomersPage,
-  "/projects": ProjectsPage,
-  "/project-customers": ProjectCustomersPage,
   "/assets": AssetsPage,
   "/devices": DevicesPage,
-  "/events": EventsPage,
   "/notifications": NotificationsPage,
+  "/projects": ProjectsPage,
+  "/customers": CustomersPage,
+  "/clients": ClientsPage,
   "/settings": SettingsPage,
   "/help": HelpSupportPage,
 };
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          {sidebarLinks.map((link, i) => {
-            const Component = components[link.link as keyof typeof components];
-            console.log("component", Component, "link", link.link);
-            return <Route path={link.link} element={<Component />} key={i} />;
-          })}
-          <Route path="/*" element={<PageNotFoundPage />} />
-        </Routes>
-      </BrowserRouter>
-    </>
+    <DashboardLayout>
+      <Routes>
+        <Route path="/" element={<Navigate replace to="/overview" />} />
+        {sidebarLinks.map((link, i) => {
+          const Component = components[link.link as keyof typeof components];
+          return <Route path={link.link} element={<Component />} key={i} />;
+        })}
+        <Route path="/*" element={<PageNotFoundPage />} />
+      </Routes>
+    </DashboardLayout>
   );
 }
 

@@ -1,0 +1,11 @@
+[
+  { "title": "Overview", "link": "/overview", "icon": "ViewIcon" },
+  { "title": "Assets", "link": "/assets", "icon": "MinusIcon" },
+  { "title": "Devices", "link": "/devices", "icon": "MinusIcon" },
+  { "title": "Notifications", "link": "/notifications", "icon": "BellIcon" },
+  { "title": "Projects", "link": "/projects", "icon": "MinusIcon" },
+  { "title": "Customers", "link": "/customers", "icon": "MinusIcon" },
+  { "title": "Clients", "link": "/clients", "icon": "MinusIcon" },
+  { "title": "Settings", "link": "/settings", "icon": "SettingsIcon" },
+  { "title": "Help & Support", "link": "/help", "icon": "QuestionOutlineIcon" }
+]

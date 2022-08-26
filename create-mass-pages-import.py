@@ -5,7 +5,7 @@ def main():
     file_path = "src/data/sidebarLinks.json"
     utils_path = "src/components/utils/"
 
-    user_input = input("Use default file path: src/data/sidebarLinks.json? y/n ")
+    user_input = input("Use default file path: src/data/sidebar-links.json? y/n ")
     if user_input == "n" or user_input == "N":
         file_path = input("Enter file path: ")
 
@@ -24,7 +24,7 @@ def main():
 
         pageName = re.sub(r"\W", "", link["title"])
 
-        import_line =  "import %s from './../pages/%s'; \n" %(pageName+"Page", pageName)
+        import_line =  "import %s from './../pages/%s'; \n" %(pageName+"Page", pageName+"Page")
         imports = imports + import_line 
         
         export_line = "%s,\n" %(pageName+"Page")

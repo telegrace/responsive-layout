@@ -36,15 +36,15 @@ const %s: React.FC<%s> = (props) => {
 export default %s;
 """ %(pageName+"Props", pageName+"Page", pageName+"Props", pageName, pageName+"Page")
 
-        file_path = pages_path + "/" + pageName + ".tsx"
+        file_path = pages_path + "/" + pageName + "Page.tsx"
         abs_path = os.path.join(dir_path, file_path)
 
         if (os.path.isfile(r""+abs_path)):
-            print("❗ File: " +pageName+".tsx already exists!")
+            print("❗ File: " +pageName+"Page.tsx already exists!")
         else:
             page_file = open(file_path, "w")
             page_file.write(page_content)
-            print("✅ File: " +pageName+".tsx created!")
+            print("✅ File: " +pageName+"Page.tsx created!")
 
 
 main()
