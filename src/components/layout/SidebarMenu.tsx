@@ -5,7 +5,7 @@ import {
   SettingsIcon,
   ViewIcon,
 } from "@chakra-ui/icons";
-import { Flex, Link } from "@chakra-ui/react";
+import { Flex, Link, Tooltip } from "@chakra-ui/react";
 import { Link as ReactLink } from "react-router-dom";
 import sidebarLinks from "../../data/sidebar-links.json";
 import LogoComponent from "./LogoComponent";
@@ -38,20 +38,32 @@ const SidebarMenu: React.FC<SidebarMenuProps> = (props) => {
           {sidebarLinks.map((link, i) => {
             return (
               <Flex className="sidebar-items" key={i} py={2.5} px={2}>
-                <>
-                  {icons[link.link as keyof typeof icons]}
-                  <Link
-                    _hover={{ textDecor: "none" }}
-                    display={["flex", "flex", "none", "flex", "flex"]}
-                    as={ReactLink}
-                    to={link.link}
-                    fontSize="2xl"
-                    mt={-0.5}
-                    mx={3}
+                <Link
+                  _hover={{ textDecor: "none" }}
+                  as={ReactLink}
+                  to={link.link}
+                >
+                  <Tooltip
+                    label={link.title}
+                    fontSize="md"
+                    placement="right-end"
+                    display={["flex", "flex", "flex", "none", "none"]}
                   >
-                    {link.title}
-                  </Link>
-                </>
+                    {icons[link.link as keyof typeof icons]}
+                  </Tooltip>
+                </Link>
+
+                <Link
+                  _hover={{ textDecor: "none" }}
+                  display={["flex", "flex", "none", "flex", "flex"]}
+                  as={ReactLink}
+                  to={link.link}
+                  fontSize="2xl"
+                  mt={-0.5}
+                  mx={3}
+                >
+                  {link.title}
+                </Link>
               </Flex>
             );
           })}
